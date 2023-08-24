@@ -23,6 +23,4 @@ public class PagoValidaciones {
         PagoRolRS rs = this.pagoValidacionesService.validarPago(mes, ruc, empleadoPagoRQ);
         return ResponseEntity.ok(rs);
     }
-
-
 }
