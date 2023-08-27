@@ -1,5 +1,5 @@
-FROM eclipse-temurin:17-jdk-alpine
-EXPOSE 8790
-VOLUME /tmp
-COPY target/*.jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+FROM openjdk:17
+EXPOSE 3000
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} configserver.jar
+ENTRYPOINT ["java","-jar","/configserver.jar"]
